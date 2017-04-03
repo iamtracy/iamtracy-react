@@ -1,4 +1,4 @@
-# getboilerplate
+# iamtracy.com
 
 Portfolio Site built with React, Bourbon/Neat/Sass/Bootstrap4; cloned from `getboilerplate`, maintained by [Brett Dorrans](https://github.com/brettdorrans).
 
