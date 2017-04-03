@@ -23,11 +23,11 @@ const App = React.createClass({
     return (
       <main className="app">
         <Nav />
-        <section className="container">
+        <div className="container">
           <Route path="/" exact component={Home} />
           <Route path="/about" exact component={About} />
           <Route path="/work" component={Work} />
-       </section>
+        </div>
      </main>
     );
   }

@@ -12,11 +12,9 @@ const Work = React.createClass({
 
   render: function() {
     return (
-      <main className="app">
         <section className="container">
             <p>404</p>
         </section>
-     </main>
     );
   }
 });

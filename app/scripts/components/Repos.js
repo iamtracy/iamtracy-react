@@ -9,29 +9,38 @@ const Repos = React.createClass({
   },
 
   getInitialState: function() {
-    let repoArray = [];
-    $.get(this.props.source, result => {
-        for (let i = 0; i < result.length; i += 1) {
-          repoArray.push(result[i])
-        }
-    });
     return {
-      repos: ['repoArrasdcadsy']
+      cards: []
     };
+  },
+
+  componentDidMount: function() {
+    $.get(this.props.source, function(result) {
+      return result;
+    }).then(function(result) { 
+        this.setState({
+        cards: result
+      });
+    }.bind(this));
   },
 
   render: function() {
     return (
-          <div className="flex-column-12 flex-gutter">
-              {/*{this.state.repos.map(function(item, index) {
-                return (<div className="card" key={index}>
-                            <div className="card-block" key={index}>
-                                {item}
-                            </div>
-                        </div>);
-              })}*/}
-            </div>
-        );
+      <section className="container">
+        <div className="card-columns">
+          {this.state.cards.map(function(item, index){
+            return ( 
+              <div className="card" key={index}>
+                <div className="card-block">
+                  <h4 className="card-title">{item.name}</h4>
+                  <p className="card-text">{item.language}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+    );
   }
 });
 

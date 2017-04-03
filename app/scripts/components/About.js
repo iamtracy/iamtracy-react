@@ -12,11 +12,9 @@ const About = React.createClass({
 
   render: function() {
     return (
-      <main className="app">
-        <section className="container">
-            <p>About Works</p>
-        </section>
-     </main>
+      <section className="container">
+        <p>About Works</p>
+      </section>
     );
   }
 });
