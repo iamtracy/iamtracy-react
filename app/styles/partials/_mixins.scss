@@ -1,0 +1,104 @@
+// Mixins
+
+// Grid mixins
+@mixin column-x {
+  @for $i from 1 through 12 {
+    .column-#{$i} {
+      @include span-columns($i);
+    }
+  }
+}
+
+@mixin shift-x {
+  @for $i from 1 through 12 {
+    .shift-#{$i} {
+      @include shift($i);
+    }
+  }
+}
+
+@mixin column-x-responsive {
+  @for $i from 1 through 12 {
+    .column-#{$i} {
+      @include span-columns(12);
+    }
+  }
+}
+
+@mixin shift-x-responsive {
+  @for $i from 1 through 12 {
+    .shift-#{$i} {
+      @include shift(0);
+    }
+  }
+}
+
+@mixin column-x-collapse {
+  @for $i from 1 through 12 {
+    .column-#{$i}-collapse {
+      @include span-columns($i, block-collapse);
+    }
+  }
+}
+
+@mixin column-x-collapse-responsive {
+  @for $i from 1 through 12 {
+    .column-#{$i}-collapse,
+    .column-#{$i}-collapse:last-child {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+}
+
+// Flexbox grid mixins
+@mixin flex-grid {
+  @for $i from 1 through 12 {
+    $width: percentage($i / 12);
+
+    .flex-column-#{$i} {
+      @include flex(0 0 auto);
+      width: $width;
+
+      .flex-gutter > & {
+        width: calc(#{$width} - #{$gutter});
+        margin: ($gutter / 2);
+      }
+    }
+  }
+}
+
+@mixin flex-grid-responsive {
+  @for $i from 1 through 12 {
+    .flex-column-#{$i} {
+      width: 100%;
+
+      .flex-gutter > & {
+        width: calc(100% - #{$gutter});
+      }
+    }
+  }
+}
+
+// Typography mixins
+@mixin header-size-scale($level, $base: 5) {
+  $font-size: modular-scale($base - $level);
+  $line-height: modular-scale(1);
+  $margin-bottom: ($font-size / 2 * ($line-height / $font-size)) + 0.00001;
+
+  margin-bottom: $margin-bottom;
+  margin-top: $margin-bottom / 1.1;
+
+  font-size: $font-size;
+
+  @include media(max-width $breakpoint-tablet-tall) {
+    $base: $base - 1;
+    $font-size: modular-scale($base - $level);
+    $margin-bottom: ($font-size / 2 * ($line-height / $font-size)) + 0.00001;
+
+    margin-top: $margin-bottom / 1.1;
+    margin-bottom: $margin-bottom;
+
+    font-size: $font-size;
+  }
+}

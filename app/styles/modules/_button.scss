@@ -1,0 +1,101 @@
+/**
+ * BUTTONS
+ */
+
+.button {
+  @include transform(translateZ(0));
+  @include transition(all 0.2s $ease-in-out-quad);
+
+  position: relative;
+  display: inline-block;
+  padding: modular-scale(0);
+  overflow: hidden;
+
+  font-size: modular-scale(0);
+  font-weight: $bold-weight;
+  text-transform: lowercase;
+  vertical-align: middle;
+  background: rgba($colour-grey, 0.05);
+  border-radius: rem(2);
+  backface-visibility: hidden;
+
+  &.x-small {
+    font-size: modular-scale(-2);
+  }
+
+  &.small {
+    font-size: modular-scale(-1);
+  }
+
+  &.medium {
+    font-size: modular-scale(0);
+  }
+
+  &.large {
+    font-size: modular-scale(1);
+
+    @include media(max-width $breakpoint-phone-wide) {
+      font-size: modular-scale(0);
+    }
+  }
+
+  &.x-large {
+    font-size: modular-scale(2);
+
+    @include media(max-width $breakpoint-phone-wide) {
+      font-size: modular-scale(1);
+    }
+  }
+
+  &.button-block {
+    display: block;
+  }
+
+  &.button-block:before {
+    top: 0;
+    width: 30%;
+    height: 150%;
+  }
+
+  &.button-cta {
+    color: $colour-cta;
+  }
+
+  &.button-cta:hover:before {
+    background: $colour-cta;
+  }
+
+}
+
+.button:before {
+  @include transition(all 0.3s $ease-in-out-quad);
+
+  position: absolute;
+  top: 25%;
+  right: 0;
+  bottom: 0;
+  left: 25%;
+  z-index: -1;
+  width: 50%;
+  height: 100%;
+
+  background: $colour-white;
+  border-radius: 100%;
+  content: "";
+  opacity: 0.01;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  color: $colour-white;
+}
+
+.button:hover:before,
+.button:focus:before,
+.button:active:before {
+  @include radial-gradient($colour-cta, $colour-transparent);
+  @include transform(scale(3) rotate(10deg));
+
+  opacity: 1;
+}

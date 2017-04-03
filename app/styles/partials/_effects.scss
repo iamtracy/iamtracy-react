@@ -1,0 +1,11 @@
+/**
+ * EFFECTS
+ */
+
+@mixin shadow() {
+  box-shadow: 0 0 rem(25) 0 rgba($colour-black, 0.25);
+}
+
+@mixin text-shadow() {
+  text-shadow: 0 0 rem(10) rgba($colour-black, 0.1);
+}

@@ -1,0 +1,61 @@
+/**
+ * HELPERS
+ */
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.centered {
+  display: block;
+  margin: 0 auto;
+}
+
+.centered-vertical {
+  @include transform(translateY(-50%));
+  position: relative;
+  top: 50%;
+  display: block;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: initial;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: initial;
+}
+
+.hide-on-desktop {
+  display: none;
+}
+
+.hide-on-mobile {
+  display: initial;
+}
+
+@include media(max-width $breakpoint-tablet-wide) {
+  .hide-on-desktop {
+    display: initial;
+  }
+
+  .hide-on-mobile {
+    display: none;
+  }
+}

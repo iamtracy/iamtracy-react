@@ -1,0 +1,49 @@
+/**
+ * GRID
+ */
+
+.container {
+  @include outer-container($max-width);
+
+  @include media(max-width $breakpoint-tablet-wide) {
+    padding: 0 modular-scale(1);
+  }
+}
+
+.container-fullwidth {
+  @include outer-container(100%);
+}
+
+.row {
+  @include row();
+}
+
+.grid-box {
+  padding: modular-scale(3);
+  margin-bottom: $gutter;
+
+  text-align: center;
+  background: rgba($colour-cta, 0.2);
+  border-radius: em(3);
+}
+
+.grid-box-tall {
+  height: em(200);
+}
+
+@include column-x();
+
+@include column-x-collapse();
+
+@include shift-x();
+
+/**
+ * RESPONSIVE GRID
+ */
+@include media(max-width $breakpoint-tablet-tall) {
+  @include column-x-responsive();
+
+  @include column-x-collapse-responsive();
+
+  @include shift-x-responsive();
+}
