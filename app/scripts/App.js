@@ -2,12 +2,12 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 import Nav from './components/Nav';
-import Home from './components/Home';
-import About from './components/About';
-import Work from './components/Work';
+import Home from './components/home/Home';
+import About from './components/about/About';
+import Work from './components/work/Work';
 
 const App = React.createClass({
 

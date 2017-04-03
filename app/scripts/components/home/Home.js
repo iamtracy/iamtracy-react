@@ -12,13 +12,11 @@ const Home = React.createClass({
     return {
       repos: ['repoArray']
     };
-  }, 
+  },
 
   render: function() {
     return (
-      <section>
-        <Profile source={APIS.profile}/>
-      </section>
+      <Profile source={APIS.profile}/>
     );
   }
 });

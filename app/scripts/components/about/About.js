@@ -8,13 +8,11 @@ const About = React.createClass({
     return {
       repos: ['repoArray']
     };
-  }, 
+  },
 
   render: function() {
     return (
-      <section className="container">
-        <p>About Works</p>
-      </section>
+      <p>About Works</p>
     );
   }
 });

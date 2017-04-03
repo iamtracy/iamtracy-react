@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Work = React.createClass({
+const Projects = React.createClass({
 
   propTypes: {},
 
@@ -8,15 +8,13 @@ const Work = React.createClass({
     return {
       repos: ['repoArray']
     };
-  }, 
+  },
 
   render: function() {
     return (
-        <section className="container">
-            <p>404</p>
-        </section>
+      <p>Projects Works</p>
     );
   }
 });
 
-export default Work;
+export default Projects;
