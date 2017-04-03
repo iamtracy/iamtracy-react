@@ -1,5 +1,10 @@
 .navbar {
     background: #333;
-    margin-bottom: 1.4rem;
-    padding-right: 1.05rem;
+    margin-bottom: 1.4rem;    
+}
+.navbar-toggleable-sm .navbar-nav .nav-link {
+    &:first-child {
+        padding-left: 0;
+    }
+    padding-right: 1.65rem;
 }

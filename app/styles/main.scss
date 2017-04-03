@@ -4,6 +4,7 @@
 // Vendor
 // scss-lint:disable all
 // bower:scss
+@import "bower_components/bootstrap/scss/bootstrap.scss";
 @import "bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
 @import "bower_components/neat/app/assets/stylesheets/_neat.scss";
 @import "bower_components/reset-css/_reset.scss";
@@ -22,6 +23,7 @@
 @import "partials/animations";
 @import "partials/media";
 @import "partials/nav";
+@import "partials/cards";
 
 // Modules
 @import "modules/app";
