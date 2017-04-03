@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 const Nav = React.createClass({
   render: function() {
@@ -14,21 +15,21 @@ const Nav = React.createClass({
                 <div className="navbar-collapse collapse" id="collapsingNavbar">
                     <ul className="navbar-nav">
                         <li className="nav-item active">
-                            <a className="nav-link" href="#">Home 
-                            <span className="sr-only">Home</span></a>
+                            <Link className="nav-link" to="/">Home</Link>
+                            <span className="sr-only">Home</span>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Work</a>
+                            <Link className="nav-link" to="/work">Work</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">About</a>
+                            <Link className="nav-link" to="/about">About</Link>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     );
-  }
+  } 
 });
 
 export default Nav;

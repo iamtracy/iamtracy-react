@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-const Header = React.createClass({
+const Profile = React.createClass({
   propTypes: {
     source: React.PropTypes.string.isRequired
   },
@@ -40,4 +40,4 @@ const Header = React.createClass({
   }
 });
 
-export default Header;
+export default Profile;
