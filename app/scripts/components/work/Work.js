@@ -3,7 +3,25 @@ import React from 'react';
 import Repos from './Repos';
 import APIS from '../api/apis';
 import Projects from './Projects';
-import Udemy from './Udemy';
+import Treehouse from './Treehouse';
+
+const Cards = [
+  {
+    img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%287%29.jpg',
+    title: 'Event Reg App',
+    content: 'JavaScript Application'
+  },
+  {
+    img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%287%29.jpg',
+    title: 'mikezorbas.com',
+    content: 'Wordpress Customizations'
+  },
+  {
+    img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%287%29.jpg',
+    title: 'chrisfaustmedia.com',
+    content: 'Wordpress Customizations'
+  }
+];
 
 const Work = React.createClass({
 
@@ -15,15 +33,15 @@ const Work = React.createClass({
       <div>
         <h2>Projects</h2>
         <div className="flex-container">
-          <Projects />
+          <Projects cards={Cards}/>
         </div>
         <h2>Github Repositories</h2>
         <div className="flex-container">
           <Repos source={APIS.repos} />
         </div>
-        <h2>Udemy</h2>
+        <h2>Treehouse Courses</h2>        
         <div className="flex-container">
-          <Udemy source={APIS.udemy}/>
+          <Treehouse source={APIS.treehouse} />
         </div>
       </div>
     );
