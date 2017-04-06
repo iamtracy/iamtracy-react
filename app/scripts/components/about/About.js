@@ -12,7 +12,8 @@ const About = React.createClass({
 
   render: function() {
     return (
-      <p>About Works</p>
+      <p>Programming is magic.
+      </p>
     );
   }
 });

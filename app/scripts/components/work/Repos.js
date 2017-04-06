@@ -26,8 +26,7 @@ const Repos = React.createClass({
 
   getLangColor: function(lang) {
     let hexVal = '';
-    if (lang) {
-      console.log(lang.toLowerCase());      
+    if (lang) {     
       let color = lang.toLowerCase();
       switch(color) {
         case 'html':
