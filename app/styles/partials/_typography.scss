@@ -49,7 +49,8 @@ h6 {
 
 h6 {
   @include font-feature-settings("kern" true, "onum'" true, "liga" true);
-
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
   font-family: $header-font;
   font-weight: $normal-weight;
   color: $colour-grey;
@@ -61,16 +62,18 @@ h1 {
 
 h2 {
   @include header-size-scale(2);
+  margin-top: 1.625rem;
+  margin-bottom: 1.4rem;
 }
 
 h3 {
   @include header-size-scale(3);
   font-weight: $normal-weight;
+  margin-bottom: 0.8rem;
 }
 
 h4,
-h5,
-h6 {
+h5 {
   @include header-size-scale(4);
 }
 

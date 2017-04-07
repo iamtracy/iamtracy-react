@@ -1,5 +1,8 @@
 import React from 'react';
 
+import Treehouse from '../work/Treehouse';
+import APIS from '../api/apis';
+
 const About = React.createClass({
 
   propTypes: {},
@@ -12,8 +15,13 @@ const About = React.createClass({
 
   render: function() {
     return (
-      <p>Programming is magic.
-      </p>
+      <div>
+        <p>Programming is magic.</p>
+        <h2>Treehouse Courses</h2>        
+        <div className="flex-container">
+          <Treehouse source={APIS.treehouse} />
+        </div>
+      </div>
     );
   }
 });

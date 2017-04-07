@@ -16,7 +16,9 @@ const Home = React.createClass({
 
   render: function() {
     return (
-      <Profile source={APIS.profile}/>
+      <div>
+        <Profile source={APIS.profile}/>
+      </div>
     );
   }
 });
