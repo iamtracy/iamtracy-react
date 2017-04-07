@@ -1,5 +1,5 @@
 .profile {
-    border-bottom: 1px solid #f3f3f3;
+    border-bottom: 1px solid $colour-off-white;
     padding-bottom: 0.675rem;
 }
 
@@ -8,8 +8,8 @@
 }
 
 .profile-phrase {
-    margin-top: 2.26rem;
-    line-height: 1.6rem; 
+    margin-top: 2.2rem;
+    line-height: 1.75rem; 
 }
 
 .language-color {
@@ -28,4 +28,19 @@
 
 .treehouse-icon {
     max-height: 110px;
+}
+
+.footer {
+    .fa {
+        font-size: 1.9rem;
+        opacity: 0.1;
+        color: $colour-oil;
+        transition: opacity 0.3s ease-in;
+        &:not(:last-child) {
+            margin-right: 1.7rem;
+        }
+        &:hover {
+            opacity: 0.3;
+        }
+    }
 }

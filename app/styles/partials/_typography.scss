@@ -30,7 +30,6 @@ h4,
 h5,
 h6 {
   @include font-feature-settings("kern" true, "onum'" true, "liga" true);
-
   font-family: $header-font;
 }
 
@@ -41,9 +40,8 @@ h4,
 h5,
 h6 {
   @include font-feature-settings("kern" true, "onum'" true, "liga" true);
-
   font-family: $header-font;
-  font-weight: $bold-weight;
+  font-weight: $normal-weight;
   color: $colour-cta;
 }
 
@@ -52,7 +50,7 @@ h6 {
   margin-bottom: 1rem;
   font-size: 1.3rem;
   font-family: $header-font;
-  font-weight: $normal-weight;
+  font-weight: $light-weight;
   color: $colour-grey;
 }
 
@@ -62,14 +60,15 @@ h1 {
 
 h2 {
   @include header-size-scale(2);
-  margin-top: 1.625rem;
+  margin-top: 1.65rem;
   margin-bottom: 1.4rem;
+  font-weight: $light-weight;
 }
 
 h3 {
   @include header-size-scale(3);
-  font-weight: $normal-weight;
-  margin-bottom: 0.8rem;
+  font-weight: $light-weight;
+  margin-bottom: 0.9rem;
 }
 
 h4,
@@ -82,13 +81,10 @@ h5 {
  */
 p {
   @include font-feature-settings("kern" true, "onum'" true, "liga" true);
-
   margin-bottom: modular-scale(0);
-
-  font-weight: $normal-weight;
+  font-weight: $light-weight;
   line-height: modular-scale(2);
   color: $colour-oil;
-
   @include media(max-width $breakpoint-tablet-tall) {
     font-size: modular-scale(-1);
   }
