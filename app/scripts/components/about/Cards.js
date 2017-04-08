@@ -18,17 +18,12 @@ const Cards = React.createClass({
 
   loadCommentsFromServer: function() {
     $.ajax({
-      url      : this.props.source,
-      data     : {limit: this.props.perPage, offset: this.state.offset},
-      dataType : 'json',
-      type     : 'GET',
+      url: this.props.source,
+      dataType: 'json',
+      type: 'GET',
 
       success: data => {
         this.setState({cards: data.badges, pageCount: 5});
-      },
-
-      error: (xhr, status, err) => {
-        console.error(this.props.source, status, err.toString());
       }
     });
   },
@@ -44,14 +39,14 @@ const Cards = React.createClass({
             return (
               <div className="card" key={index}>
                 <div className="card-block treehouse">
-                    <img className="card-img-top treehouse-icon pb-3" 
+                    <img className="card-img-top treehouse-icon pb-3"
                 src={item.icon_url} alt="Card image cap" />
-                  <h4 className="card-title">{item.name}</h4>
-                  {item.courses.map(function(course, courseIndex) {
-                      return (
-                        <p className="card-text" key={courseIndex}>{course.title}</p>
-                      );
-                  })}
+                <h4 className="card-title">{item.name}</h4>
+                {item.courses.map(function(course, courseIndex) {
+                  return (
+                    <p className="card-text" key={courseIndex}>{course.title}</p>
+                  );
+                })}
                 </div>
               </div>
             );

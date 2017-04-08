@@ -77,7 +77,5 @@
       ]
     }
   },
-  "dependencies": {
-    "react-paginate": "^4.3.1"
-  }
+  "dependencies": {}
 }
