@@ -30,6 +30,7 @@
 }
 
 .treehouse {
+  cursor: default;
   .card-title {
     margin-bottom: 0.9rem;
   }
@@ -43,6 +44,10 @@
 
   &img:hover {
     opacity: .8;
+  }
+
+  a:hover {
+    text-decoration: none;
   }
 
   &::after {

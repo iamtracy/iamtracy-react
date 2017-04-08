@@ -6,7 +6,7 @@ import APIS from '../api/apis';
 const About = React.createClass({
 
   propTypes: {},
-
+  
   getInitialState: function() {
     return {
       repos: ['repoArray']
@@ -15,16 +15,14 @@ const About = React.createClass({
 
   render: function() {
     return (
-      <div className="container">
-        <p>Programming is magic that requires years of practice
-          and dedication to perform.
-        Starting out can be less than glorious, as I
+      <div>
+        <p>Programming is like a form magic that takes years of practices
+          and dedication to perform. Starting out can be less than glorious, as I
         did about 3 years ago. At that time you'd find me at an
-        entry level position (at my current company)
-        during the day while taking tutorials on nights and weekend.
-        With persistance comes knowledge and
-        (hopefully) new responsibilities. Today you'll
-        find me writing enterprise
+        entry level position during the day while taking tutorials
+        on nights and weekend. With hard work and persistance
+        comes knowledge and (hopefully) new responsibilities.
+        Today you'll find me at the same company writing enterprise
         level JavaScript applications.</p>
         <h2>Treehouse Courses</h2>
         <div className="flex-container">

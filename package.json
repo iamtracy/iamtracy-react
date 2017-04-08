@@ -77,5 +77,7 @@
       ]
     }
   },
-  "dependencies": {}
+  "dependencies": {
+    "react-loading-animation": "^1.1.0"
+  }
 }

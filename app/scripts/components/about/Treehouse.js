@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import LoadingAnimation from '../loading/Loading';
 
 const Treehouse = React.createClass({
 
@@ -12,7 +13,8 @@ const Treehouse = React.createClass({
   getInitialState: function() {
     return {
       cards: [],
-      perScroll: this.props.perScroll
+      perScroll: this.props.perScroll,
+      loading: true
     };
   },
 
@@ -23,7 +25,7 @@ const Treehouse = React.createClass({
       type: 'GET',
 
       success: data => {
-        this.setState({cards: data.badges, initCards: this.props.perScroll});
+        this.setState({cards: data.badges, initCards: this.props.perScroll, loading: false});
       }
     });
   },
@@ -45,6 +47,13 @@ const Treehouse = React.createClass({
   },
 
   render: function() {
+    if (this.state.loading) {
+      return (
+        <div className="loading-animation">
+          <LoadingAnimation />
+        </div>
+      );
+    }
     return (
         <div className="card-columns">
           {this.state.cards.map(function(item, index) {
