@@ -3,7 +3,6 @@ import React from 'react';
 import Repos from './Repos';
 import APIS from '../api/apis';
 import Projects from './Projects';
-import Treehouse from './Treehouse';
 
 const Cards = [
   {
@@ -38,10 +37,6 @@ const Work = React.createClass({
         <h2>Github Repositories</h2>
         <div className="flex-container">
           <Repos source={APIS.repos} />
-        </div>
-        <h2>Treehouse Courses</h2>        
-        <div className="flex-container">
-          <Treehouse source={APIS.treehouse} />
         </div>
       </div>
     );

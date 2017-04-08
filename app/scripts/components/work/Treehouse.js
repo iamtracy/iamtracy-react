@@ -21,10 +21,8 @@ const Treehouse = React.createClass({
         const badges = result.badges;
         const badgesArr = [];
         badges.forEach(item => {
-            console.log(item); 
             badgesArr.push(item);
-        })
-        console.log(badgesArr);
+        });
       this.setState({
         cards: badgesArr
       });
@@ -35,11 +33,10 @@ const Treehouse = React.createClass({
     return (
         <div className="card-columns">
           {this.state.cards.map(function(item, index) {
-            console.log(item)
             return (
               <div className="card" key={index}>
                 <div className="card-block treehouse">
-                    <img className="card-img-top treehouse-icon text-center pb-3" 
+                    <img className="card-img-top treehouse-icon pb-3" 
                 src={item.icon_url} alt="Card image cap" />
                   <h4 className="card-title">{item.name}</h4>
                   {item.courses.map(function(course, courseIndex) {

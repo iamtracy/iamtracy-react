@@ -1,16 +1,47 @@
+.profile {
+    border-bottom: 1px solid $colour-off-white;
+    padding-bottom: 0.675rem;
+}
+
 .profile-pic {
     max-width: 200px;
+}
+
+.profile-phrase {
+    margin-top: 2.2rem;
+    line-height: 1.75rem; 
 }
 
 .language-color {
     margin-right: .28rem;
 }
 
+.tech {
+    margin-top: 1.5rem;
+    margin-bottom: 1.7rem;
+}
+
 .tech-icon {
-    max-height: 75px;
+    max-height: 63px;
     margin-bottom: 1.7rem;
 }
 
 .treehouse-icon {
     max-height: 110px;
+}
+
+.footer {
+    .fa {
+        cursor: pointer;
+        font-size: 1.9rem;
+        opacity: 0.1;
+        color: $colour-oil;
+        transition: opacity 0.3s ease-in;
+        &:not(:last-child) {
+            margin-right: 1.7rem;
+        }
+        &:hover {
+            opacity: 0.3;
+        }
+    }
 }
