@@ -29,7 +29,7 @@ const About = React.createClass({
         level JavaScript applications.</p>
         <h2>Treehouse Courses</h2>        
         <div className="flex-container">
-          <Treehouse source={APIS.treehouse} perPage={5}/>
+          <Treehouse source={APIS.treehouse} perScroll={12}/>
         </div>
       </div>
     );

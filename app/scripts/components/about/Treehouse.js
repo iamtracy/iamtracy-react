@@ -6,25 +6,24 @@ const Treehouse = React.createClass({
 
   propTypes: {
     source: React.PropTypes.string.isRequired,
-    perPage: React.PropTypes.number.isRequired
+    perScroll: React.PropTypes.number.isRequired
   },
 
   getInitialState: function() {
     return {
       cards: [],
-      pageCount: 10
+      perScroll: this.props.perScroll
     };
   },
 
   loadCommentsFromServer: function() {
     $.ajax({
       url      : this.props.source,
-      data     : {limit: this.props.perPage, offset: this.state.offset},
       dataType : 'json',
       type     : 'GET',
 
       success: data => {
-        this.setState({cards: data.badges, initCards: 11});
+        this.setState({cards: data.badges, initCards: this.props.perScroll});
       },
 
       error: (xhr, status, err) => {
