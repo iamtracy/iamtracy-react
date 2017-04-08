@@ -2,31 +2,39 @@
 
 import React from 'react';
 
-const Treehouse = React.createClass({
+const Cards = React.createClass({
 
   propTypes: {
-    source: React.PropTypes.string.isRequired
+    source: React.PropTypes.string.isRequired,
+    perPage: React.PropTypes.number.isRequired
   },
 
   getInitialState: function() {
     return {
-      cards: []
+      cards: [],
+      pageCount: 10
     };
   },
 
-  componentDidMount: function() {
-    $.get(this.props.source, function(result) {
-      return result;
-    }).then(function(result) {
-        const badges = result.badges;
-        const badgesArr = [];
-        badges.forEach(item => {
-            badgesArr.push(item);
-        });
-      this.setState({
-        cards: badgesArr
-      });
-    }.bind(this));
+  loadCommentsFromServer: function() {
+    $.ajax({
+      url      : this.props.source,
+      data     : {limit: this.props.perPage, offset: this.state.offset},
+      dataType : 'json',
+      type     : 'GET',
+
+      success: data => {
+        this.setState({cards: data.badges, pageCount: 5});
+      },
+
+      error: (xhr, status, err) => {
+        console.error(this.props.source, status, err.toString());
+      }
+    });
+  },
+
+  componentDidMount() {
+    this.loadCommentsFromServer();
   },
 
   render: function() {
@@ -53,4 +61,4 @@ const Treehouse = React.createClass({
   }
 });
 
-export default Treehouse;
+export default Cards;
