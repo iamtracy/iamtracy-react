@@ -16,10 +16,10 @@ const About = React.createClass({
   render: function() {
     return (
       <div>
-        <p>Programming is like a form magic that takes years of practices
+        <p>Programming is like a form magic that takes years of practice
           and dedication to perform. Starting out can be less than glorious, as I
         did about 3 years ago. At that time you'd find me at an
-        entry level position during the day while taking tutorials
+        entry level position while taking tutorials
         on nights and weekend. With hard work and persistance
         comes knowledge and (hopefully) new responsibilities.
         Today you'll find me at the same company writing enterprise
