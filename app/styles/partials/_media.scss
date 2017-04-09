@@ -68,6 +68,9 @@
 }
 
 @include media-breakpoint-down(md) {
+    .profile {
+        padding-bottom: .5rem;
+    }
     .profile-phrase {
         margin-top: 1.3rem;
         line-height: 1.55rem;
