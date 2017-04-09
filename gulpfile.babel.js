@@ -170,7 +170,11 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['html', 'images', 'fonts', 'extras'], () => {
+gulp.task('apply-prod-environment', function() {
+    process.env.NODE_ENV = 'production';
+});
+
+gulp.task('build', ['apply-prod-environment', 'html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 

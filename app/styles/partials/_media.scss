@@ -1,6 +1,6 @@
 .profile {
     border-bottom: 1px solid $colour-off-white;
-    padding-bottom: 0.675rem;
+    padding-bottom: 1.55rem;
 }
 
 .profile-pic {
@@ -31,19 +31,25 @@
 }
 
 .footer {
+    a {
+        &:not(:last-child) {
+            margin-right: 1.7rem;
+        }
+    }
     .fa {
         cursor: pointer;
         font-size: 1.9rem;
         opacity: 0.1;
         color: $colour-oil;
         transition: opacity 0.3s ease-in;
-        &:not(:last-child) {
-            margin-right: 1.7rem;
-        }
         &:hover {
             opacity: 0.3;
         }
     }
+}
+
+.loading-animation {
+    margin: 3.375rem auto;
 }
 
 
@@ -60,3 +66,13 @@
 #react-paginate .break a {
     cursor: default;
 }
+
+@include media-breakpoint-down(md) {
+    .profile {
+        padding-bottom: .5rem;
+    }
+    .profile-phrase {
+        margin-top: 1.3rem;
+        line-height: 1.55rem;
+    }
+ }

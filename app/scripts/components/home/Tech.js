@@ -8,7 +8,7 @@ const logos = [
   {img: 'https://cldup.com/Rg6WLgqccB.svg'},
   {img: 'https://cdn.worldvectorlogo.com/logos/angular-icon.svg'},
   {img: 'https://cdn.worldvectorlogo.com/logos/bower.svg'},
-  {img: 'https://cdn.worldvectorlogo.com/logos/html5.svg'},
+  {img: 'https://cdn.worldvectorlogo.com/logos/html-5.svg'},
   {img: 'https://ohdoylerules.com/content/images/css3.svg'},
   {img: 'https://cdn.worldvectorlogo.com/logos/javascript.svg'},
   {img: 'https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/jquery.svg'},

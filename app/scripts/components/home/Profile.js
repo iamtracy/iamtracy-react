@@ -2,7 +2,8 @@
 
 import React from 'react';
 
-import Tech from '../tech/Tech';
+import Tech from './Tech';
+import LoadingAnimation from '../loading/Loading';
 
 const Profile = React.createClass({
   propTypes: {
@@ -10,7 +11,8 @@ const Profile = React.createClass({
   },
   getInitialState: function() {
     return {
-      repos: []
+      repos: [],
+      loading: true
     };
   },
   componentDidMount: function() {
@@ -18,11 +20,19 @@ const Profile = React.createClass({
       return result;
     }).then(function(result) {
       this.setState({
-        repos: result
+        repos: result,
+        loading: false
       });
     }.bind(this));
   },
   render: function() {
+    if (this.state.loading) {
+      return (
+        <div className="loading-animation">
+          <LoadingAnimation />
+        </div>
+      );
+    }
     return (
       <div>
         <div className="flex-container profile">
@@ -35,8 +45,6 @@ const Profile = React.createClass({
               <h6>{this.state.repos.company} | {this.state.repos.location}</h6>
               <p className="profile-phrase">{this.state.repos.bio}</p>
             </div>
-          </div>
-          <div className="flex-column-12 pt-3">
           </div>
         </div>
         <Tech />

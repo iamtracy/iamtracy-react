@@ -77,5 +77,8 @@
       ]
     }
   },
-  "dependencies": {}
+  "dependencies": {
+    "react-favicon": "0.0.5",
+    "react-loading-animation": "^1.1.0"
+  }
 }

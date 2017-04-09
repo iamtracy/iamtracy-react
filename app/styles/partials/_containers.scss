@@ -1,0 +1,10 @@
+.main {
+    padding-top: 1.95rem;
+}
+
+@include media-breakpoint-down(md) {
+    .main {
+        padding-top: 3.4rem;
+        text-align: center;
+    }
+ }
