@@ -33,6 +33,7 @@ const Treehouse = React.createClass({
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
     this.loadCommentsFromServer();
+    this.handleScroll();
   },
 
   componentWillUnmount() {

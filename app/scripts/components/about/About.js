@@ -6,7 +6,7 @@ import APIS from '../api/apis';
 const About = React.createClass({
 
   propTypes: {},
-  
+
   getInitialState: function() {
     return {
       repos: ['repoArray']

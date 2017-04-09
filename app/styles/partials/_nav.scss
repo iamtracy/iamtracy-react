@@ -1,10 +1,33 @@
 .navbar {
     background: #333;
-    margin-bottom: 1.95rem;    
-}
-.navbar-toggleable-sm .navbar-nav .nav-link {
-    &:first-child {
-        padding-left: 0;
+    padding: 0;
+    .navbar-toggler {
+        z-index: 9999999;
     }
-    padding-right: 1.65rem;
+}
+.navbar-toggler {
+    top: 5px;
+}
+
+.navbar-nav {
+    padding: 0.5rem 1rem 0.5rem 0; 
+    .nav-item {
+        &:first-child {
+            padding-left: 0;
+        }
+        padding-right: 1.9rem;
+        .nav-link {
+            &:first-child {
+                padding-left: 0;
+                
+            }
+            color: $colour-off-white;
+            &.active {
+                color: $colour-white;
+            }   
+            &:hover {
+                color: $colour-white;
+            }          
+        }
+    }   
 }

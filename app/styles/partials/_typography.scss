@@ -58,9 +58,15 @@ h1 {
   @include header-size-scale(1);
 }
 
+.work {
+  h2:not(:first-child) {
+    margin-top: 1.65rem;    
+  }
+}
+
 h2 {
   @include header-size-scale(2);
-  margin-top: 1.65rem;
+  margin-top: 0;
   margin-bottom: 1.4rem;
   font-weight: $light-weight;
 }

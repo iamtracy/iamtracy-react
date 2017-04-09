@@ -29,7 +29,7 @@ const Work = React.createClass({
 
   render: function() {
     return (
-      <div>
+      <div className="work">
         <h2>Projects</h2>
         <div className="flex-container">
           <Projects cards={Cards}/>
