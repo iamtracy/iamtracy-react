@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import Tech from '../tech/Tech';
+import Tech from './Tech';
 import LoadingAnimation from '../loading/Loading';
 
 const Profile = React.createClass({
@@ -45,8 +45,6 @@ const Profile = React.createClass({
               <h6>{this.state.repos.company} | {this.state.repos.location}</h6>
               <p className="profile-phrase">{this.state.repos.bio}</p>
             </div>
-          </div>
-          <div className="flex-column-12 pt-3">
           </div>
         </div>
         <Tech />

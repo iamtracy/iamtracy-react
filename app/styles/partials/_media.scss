@@ -1,6 +1,6 @@
 .profile {
     border-bottom: 1px solid $colour-off-white;
-    padding-bottom: 0.675rem;
+    padding-bottom: 1.55rem;
 }
 
 .profile-pic {
@@ -66,3 +66,10 @@
 #react-paginate .break a {
     cursor: default;
 }
+
+@include media-breakpoint-down(md) {
+    .profile-phrase {
+        margin-top: 1.3rem;
+        line-height: 1.55rem;
+    }
+ }
