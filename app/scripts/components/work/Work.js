@@ -34,7 +34,7 @@ const Cards = [
     url: 'http://trivia-beta.s3-website-us-west-2.amazonaws.com/',
     img: 'images/trivia.png',
     title: 'Trivia (beta)',
-    content: 'JavaScript App'
+    content: 'JavaScript Application'
   },
   {
     url: 'https://vts.inxpo.com/scripts/Server.nxp?LASCmd=AI:4;F:QS!10100&ShowKey=28709',
