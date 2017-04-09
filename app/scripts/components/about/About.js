@@ -20,7 +20,7 @@ const About = React.createClass({
           and dedication to perform. Starting out can be less than glorious, as I
         did about 3 years ago. At that time you'd find me at an
         entry level position while taking tutorials
-        on nights and weekend. With hard work and persistance
+        on nights and weekends. With hard work and persistance
         comes knowledge and (hopefully) new responsibilities.
         Today you'll find me at the same company writing enterprise
         level JavaScript applications.</p>

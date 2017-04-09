@@ -9,6 +9,7 @@ import Home from './components/home/Home';
 import About from './components/about/About';
 import Work from './components/work/Work';
 import Footer from './components/footer/Footer';
+import Favicon from 'react-favicon';
 
 const App = React.createClass({
 
@@ -23,6 +24,7 @@ const App = React.createClass({
   render: function() {
     return (
       <div>
+        <Favicon url={['./favicon.png']}/>
       <Nav />
       <main className="app">
         <div className="container main">
