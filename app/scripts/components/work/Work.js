@@ -1,8 +1,8 @@
 import React from 'react';
 
 import Repos from './Repos';
+import Projects from './repos/Projects';
 import APIS from '../api/apis';
-import Projects from './Projects';
 
 const Cards = [
   {

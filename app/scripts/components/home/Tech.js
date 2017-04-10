@@ -40,7 +40,7 @@ const Tech = React.createClass({
             return (
               <div className="flex-column-2 flex gutter" key={index}>
                 <img className="tech-icon" src={item.img}
-                data-toggle="tooltip"
+                data-toggle="tooltip" data-animation="false"
                 data-placement="top" title={item.tip}/>
               </div>
             );

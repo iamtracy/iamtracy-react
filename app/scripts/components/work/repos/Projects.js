@@ -16,7 +16,7 @@ const Projects = React.createClass({
     return (
     <div className="card-columns">
       {this.props.cards.map(function(item, index) {
-        return <Card card={item} index={index}/>;
+        return <Card card={item} key={index}/>;
       })}
     </div>
     );
