@@ -14,8 +14,8 @@ const Card = React.createClass({
 
   componentDidMount: function() {
     this.setState({
-        loading: false
-      });
+      loading: false
+    });
   },
 
   render: function() {
