@@ -1,6 +1,6 @@
 .profile {
     border-bottom: 1px solid $colour-off-white;
-    padding-bottom: 1.55rem;
+    padding-bottom: 1.585rem;
 }
 
 .profile-pic {
@@ -39,11 +39,11 @@
     .fa {
         cursor: pointer;
         font-size: 1.9rem;
-        opacity: 0.1;
+        opacity: 0.3;
         color: $colour-oil;
         transition: opacity 0.3s ease-in;
         &:hover {
-            opacity: 0.3;
+            opacity: 0.5;
         }
     }
 }

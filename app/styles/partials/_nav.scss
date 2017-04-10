@@ -12,10 +12,11 @@
 .navbar-nav {
     padding: 0.5rem 1rem 0.5rem 0; 
     .nav-item {
+        font-weight: 300;
+        padding-right: 1.7rem;
         &:first-child {
             padding-left: 0;
         }
-        padding-right: 1.9rem;
         .nav-link {
             &:first-child {
                 padding-left: 0;
